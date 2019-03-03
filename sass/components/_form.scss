@@ -6,7 +6,7 @@
   &__input {
     font-size: 1.5rem;
     font-family: inherit;
-    color: inherit;
+    color: $color-white;
     padding: 1.5rem 2rem;
     border-radius: 2px;
     background-color: rgba($color-white, 0.5);
@@ -15,6 +15,10 @@
     width: 90%;
     display: block;
     transition: all .3s;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -50,6 +54,11 @@
   &__radio-group {
     width: 49%;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-input {
